@@ -8,6 +8,11 @@
     <title>{{$title}} - Controle de Séries</title>
 </head>
 <body>
+<ul>
+    <li><a href="/series">Home</a></li>
+    <li><a href="/series/novo">Criar</a></li>
+</ul>
+
 <h1>{{$title}}</h1>
 
 {{$slot}}
