@@ -13,6 +13,6 @@ class SeriesController
             'Grey\'s Anatomy'
         ];
 
-        return view('series/index', compact('series'));
+        return view('series.index')->with('series', $series);
     }
 }
