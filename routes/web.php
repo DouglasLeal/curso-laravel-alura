@@ -8,3 +8,4 @@ Route::get('/', function () {
 
 Route::get('/series', [SeriesController::class, "index"]);
 Route::get('/series/novo', [SeriesController::class, "criar"]);
+Route::post('/series/salvar', [SeriesController::class, "store"]);
