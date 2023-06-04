@@ -21,13 +21,7 @@ class SeriesController
     }
 
     public function store(Request $request){
-        $nome = $request->input('nome');
-
-        //DB::insert('INSERT INTO series (nome) VALUES (?)', [$nome]);
-
-        $serie = new Serie();
-        $serie->nome = $nome;
-        $serie->save();
+        Serie::create($request->all());
 
         return redirect('/series');
     }
