@@ -18,10 +18,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/series">Home</a>
+                    <a class="nav-link" href="{{route("series.index")}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/series/novo">Criar</a>
+                    <a class="nav-link" href="{{route("series.create")}}">Criar</a>
                 </li>
             </ul>
         </div>

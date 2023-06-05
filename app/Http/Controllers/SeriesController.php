@@ -23,6 +23,7 @@ class SeriesController
     public function store(Request $request){
         Serie::create($request->all());
 
-        return redirect('/series');
+        //return redirect()->route('series.index');
+        return to_route('series.index');
     }
 }

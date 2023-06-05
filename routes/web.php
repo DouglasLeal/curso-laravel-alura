@@ -11,7 +11,7 @@ Route::get('/', function () {
 //Route::post('/series/salvar', [SeriesController::class, "store"]);
 
 Route::controller(SeriesController::class)->group(function(){
-    Route::get('/series', "index");
-    Route::get('/series/novo', "criar");
-    Route::post('/series/salvar', "store");
+    Route::get('/series', "index")->name('series.index');
+    Route::get('/series/novo', "criar")->name('series.create');
+    Route::post('/series/salvar', "store")->name('series.store');
 });

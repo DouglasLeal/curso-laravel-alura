@@ -1,5 +1,5 @@
 <x-layout title="Nova Série">
-    <form action="/series/salvar" method="post">
+    <form action="{{route("series.store")}}" method="post">
         @csrf
         <label class="fw-bold mb-1" for="nome">Nome:</label>
         <input class="form-control mb-3" type="text" id="nome" name="nome">
