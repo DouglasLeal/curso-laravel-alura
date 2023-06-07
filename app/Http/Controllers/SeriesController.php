@@ -16,7 +16,7 @@ class SeriesController
         return view('series.index')->with('series', $series);
     }
 
-    public function criar(Request $request){
+    public function create(Request $request){
         return view('series.create');
     }
 
@@ -24,6 +24,11 @@ class SeriesController
         Serie::create($request->all());
 
         //return redirect()->route('series.index');
+        return to_route('series.index');
+    }
+
+    public function destroy(Request $request){
+        Serie::destroy($request->id);
         return to_route('series.index');
     }
 }

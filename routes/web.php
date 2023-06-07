@@ -10,8 +10,14 @@ Route::get('/', function () {
 //Route::get('/series/novo', [SeriesController::class, "criar"]);
 //Route::post('/series/salvar', [SeriesController::class, "store"]);
 
-Route::controller(SeriesController::class)->group(function(){
-    Route::get('/series', "index")->name('series.index');
-    Route::get('/series/novo', "criar")->name('series.create');
-    Route::post('/series/salvar', "store")->name('series.store');
-});
+//Route::controller(SeriesController::class)->group(function(){
+//    Route::get('/series', "index")->name('series.index');
+//    Route::get('/series/novo', "criar")->name('series.create');
+//    Route::post('/series/salvar', "store")->name('series.store');
+//});
+
+Route::resource('/series', SeriesController::class)
+    ->only(['index', 'create', 'store']);
+
+Route::post('/series/destroy/{id}', [SeriesController::class, 'destroy'])
+    ->name('series.destroy');
