@@ -28,7 +28,7 @@ class SeriesController
     }
 
     public function destroy(Request $request){
-        Serie::destroy($request->id);
+        Serie::destroy($request->series);
         return to_route('series.index');
     }
 }

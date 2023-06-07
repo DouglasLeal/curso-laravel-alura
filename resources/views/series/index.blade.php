@@ -5,6 +5,7 @@
 
             <form class="ms-3" action="{{route('series.destroy', $serie->id)}}" method="post">
                 @csrf
+                @method('DELETE')
                 <input class="btn btn-danger" value="X" type="submit">
             </form>
         </li>
