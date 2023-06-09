@@ -1,7 +1,7 @@
 <form action="{{$action}}" method="post">
     @csrf
 
-    @isset($nome)
+    @isset($update)
         @method('PUT')
     @endisset
     <label class="fw-bold mb-1" for="nome">Nome:</label>
